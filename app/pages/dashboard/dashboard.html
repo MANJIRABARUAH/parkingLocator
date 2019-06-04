@@ -1,0 +1,19 @@
+<div class="container">
+<div class="row">
+  <div class="col-sm-4">
+    <h2> Available Parking Garage</h2>
+    <form name ="form">
+      <div class="form-group">
+        <label for="parkingLocation">Choose Parking Location:</label>
+        <select class="form-control" ng-change ="selectedGarage(parkingLocation)" ng-options = "parkingLocation.Name for parkingLocation in dataSet track by dataSet.indexOf(parkingLocation)" ng-model="parkingLocation" id="parkingLocation" >
+				</select>
+      </div>
+      <div class="form-group" ng-show="parkingLocation.Name">
+        <label for="parkingType">Type of Parking:</label>
+        <select class="form-control" ng-change="changeView('map',parkingType)" ng-options = "type for type in typeOfParking" ng-model="parkingType" id="parkingType">
+        </select>
+      </div>
+  	</form>
+  </div>
+</div>
+</div>
